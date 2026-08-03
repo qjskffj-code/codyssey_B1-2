@@ -107,15 +107,24 @@
 - 코디세이의 실제 구조(무강의·미션 기반)와 카피가 어긋나지 않는다
 - "AI"라는 공통 단어를 두 문장이 공유해, 앞말만 교체되고 "AI"는 제자리에 남아 색이 바뀌는 타이포 연출이 가능해진다
 
-### 마지막 브랜드 장치 (S04 후반, 약 6.4~10초)
+### 마지막 브랜드 장치 (실측 타임코드, 30fps)
 
-| 장치 | 내용 | 이유 |
-|---|---|---|
-| 로고 | 코디세이 로고 이미지 (돛=주황 + 물결=파랑) | 직전 하이파이브에서 주황 로봇 팔과 파란 소매가 맞닿는 형태를 이미 보여줬으므로, 로고의 구조가 설명 없이 반복된다 |
-| 브랜드명 | "코디세이" 텍스트 + 나레이션 | 검색 가능한 고유명사를 소리로 남기는 것이 이 길이에서 가장 효율적 |
-| 고지 문구 | "본 영상은 비공식 영상이며, 교육용으로 제작되었습니다." (하단) | 실제 브랜드를 소재로 한 학습용 제작물임을 명시 |
+| 장치 | 타임코드 | 길이 | 내용 |
+|---|---|---|---|
+| **브랜드명 타이포** | 8:14f ~ 9:14f | **1.00초** | "코디세이" — 아웃 애니메이션으로 처리 |
+| **공식 로고** | 9:22f ~ 10:00 | **0.27초 (8f)** | 코디세이 로고 (돛=주황 + 물결=파랑) |
+| **나레이션** | 동 구간 | — | "코디세이." |
+| 고지 문구 | 하단 | — | "본 영상은 비공식 영상이며, 교육용으로 제작되었습니다." |
 
-> CTA·QR·웹주소는 화면에 넣지 않았다. 1.5초에 로고·브랜드명·고지·CTA를 다 넣으면 아무것도 읽히지 않기 때문이다.
+**미션 요건 판정** — 「마지막 3~5초 구간에 브랜드 인지 장치 1개 이상 포함」에 대해, 마지막 3초 구간(7:00 ~ 10:00) 안에 브랜드명 타이포 1초 + 로고 + 나레이션이 모두 들어가므로 **충족**한다.
+
+**설계 근거**
+
+로고는 직전 하이파이브에서 주황 로봇 팔과 파란 소매가 맞닿는 형태를 이미 보여줬으므로, 그 구조가 설명 없이 반복된다. 로고 자체의 노출은 짧지만 **형태가 앞 장면에서 예고돼 있어** 인지 부담이 적다.
+
+브랜드명은 타이포 1초와 나레이션이 함께 전달한다. 검색 가능한 고유명사를 **소리로 남기는 것**이 10초 길이에서 가장 효율적이라고 판단했다.
+
+> CTA·QR·웹주소는 화면에 넣지 않았다. 1.5초 남짓한 구간에 로고·브랜드명·고지·CTA를 다 넣으면 아무것도 읽히지 않기 때문이다.
 
 ---
 
@@ -131,7 +140,7 @@
 | **오디오(나레이션)** | ElevenLabs — Voice Design | 20대 여성 성우 보이스를 직접 설계해 브랜드 톤에 맞춤. 기성 TTS보다 톤 통제가 가능 |
 | **오디오(BGM)** | **Suno** — `Codyssey Ad Build_v2` (ver.2 최종 채택) | 애니메이션 엔딩처럼 경쾌하고 통통 튀는 톤. ver.1은 CapCut 무료 음원이었으나 ver.2에서 AI 생성물로 교체 |
 | **오디오(효과음)** | Pixabay · CapCut 무료 효과음 | Suno로도 제작했으나 짧은 효과음은 무료 라이브러리가 타이밍 맞춤에 적절해 채택 |
-| **통합 편집** | CapCut (Android) | 컷 편집, 자막·타이포, 씬 전환 효과, 필터·색보정, 로고 오버레이, 오디오 레벨·싱크 |
+| **통합 편집** | CapCut (Android) | 컷 편집, 자막·타이포, 씬 전환 효과, 필터·색보정, 로고·타이포 아웃 애니메이션, 오디오 레벨·싱크 |
 
 ### 3줄 의사결정 요약
 
@@ -193,7 +202,7 @@ Google Flow 무료 플랜은 **계정당 일일 50크레딧**을 제공한다. �
 **절감 전략 (워크북 제시 3개 중 2개 적용)**
 
 - ✅ **동일한 스타일 레퍼런스를 고정해 재생성 횟수 줄이기** — 7항목 스타일 템플릿 + 확정 캐릭터 참조 고정
-- ✅ **정지 이미지 + 짧은 모션 중심으로 구성** — 로고 구간은 생성 없이 편집 오버레이로 처리
+- ✅ **정지 이미지 + 짧은 모션 중심으로 구성** — 브랜드 페이오프 구간은 생성 없이 편집 애니메이션으로 처리
 - 추가: **최소 사양 고정** — 4초 · 1개 · Omni Flash로 1회 7크레딧을 유지하고, x2 생성과 상위 모델(Veo Quality 100크레딧)은 사용하지 않음
 - 추가: **리스크 우선 검증** — 타건 → 로봇 회전 → 줌아웃 순으로 실패 비용이 큰 컷을 앞당겨 테스트
 
@@ -214,12 +223,12 @@ Google Flow 무료 플랜은 **계정당 일일 50크레딧**을 제공한다. �
 
 **설계 원리 두 가지**
 
-1. **최저점을 실제로 느끼게 한다.** S01~S02(합 3.60초)는 BGM 없이 카메라를 거의 정지시키고, 화면을 흐리게 가라앉혔다가 되돌린다. 광고가 "지루함"을 말로 설명하지 않고 관객이 3.6초간 겪게 하는 것이 이 구조의 무기다.
+1. **최저점을 실제로 느끼게 한다.** S01~S02(합 3.60초)는 BGM 없이 아주 작은 기계 웅웅거림만 깔고, 카메라를 거의 정지시킨 채 화면을 흐리게 흩뜨렸다가 되돌린다. 광고가 "지루함"을 말로 설명하지 않고 관객이 3.6초간 겪게 하는 것이 이 구조의 무기다.
 2. **후반 정점형 구조.** 일반적인 광고가 초반에 정점을 두고 내려오는 것과 반대로, 브랜드 노출이 감정 최고점 **직후**에 오도록 S04 후반에 배치해 각인을 극대화했다.
 
 **곡선 형태:** 평평한 저지대(S01~S02) → 수직 상승(S03) → 완만한 오르막·정점·여운(S04 내부)
 
-> S04는 타건 → 얼굴 등장 → 하이파이브 → 브랜드 로고까지 하나의 연속 흐름으로 편집했다. 로고·브랜드명은 별도 씬이 아니라 S04 후반 구간에 오버레이로 얹었다.
+> S04는 타건 → 얼굴 등장 → 하이파이브 → 브랜드 페이오프까지 하나의 연속 흐름으로 편집했다. 브랜드명 타이포와 로고는 별도 씬이 아니라 S04 후반 구간에 **아웃 애니메이션**으로 처리했다.
 
 ### 오프닝 훅 (0~2초)
 
@@ -262,7 +271,7 @@ S02까지 무채색 강의실에 파란 주인공만 있다가, S03에서 주황
 | S03 로봇 등장 | 3:18f ~ 6:12f | 2.80s | 색·소리·속도의 반전으로 세계가 바뀐다 | "진짜로 써먹는 AI." |
 | S04 타건~하이파이브~브랜드 | 6:12f ~ 10:00 | 3.60s | 직접 손으로 하는 행위 → 성취 → 브랜드 각인 | "직접 부딪치며 배우는 곳 코디세이." |
 
-> S04는 손 타이핑 → 얼굴 등장 → 하이파이브 → 로고·브랜드명 오버레이까지 하나의 연속 편집 흐름이며, 별도 씬으로 분리하지 않았다.
+> S04는 손 타이핑 → 얼굴 등장 → 하이파이브 → 브랜드 페이오프까지 하나의 연속 편집 흐름이며, 별도 씬으로 분리하지 않았다.
 
 ### 파일명 규칙
 
@@ -275,9 +284,303 @@ S02까지 무채색 강의실에 파란 주인공만 있다가, S03에서 주황
 | `코디세이_b1_2_캐릭터시트_세이_v05.png` | 세이(주인공) 캐릭터 시트 5차 |
 | `코디세이_b1_2_캐릭터시트_코디_v03.png` | 코디(로봇) 캐릭터 시트 3차 |
 | `코디세이_b1_2_S01_화이트보드_v01.png` | S01 키 이미지 |
-| `코디세이_b1_2y_S03_코디등장_v11.mp4` | S03 로봇 등장 영상 11차 |
+| `코디세이_b1_2_S03_코디등장_v11.mp4` | S03 로봇 등장 영상 11차 |
 | `코디세이_b1_2_S04_타이핑_하이파이브_v08.mp4` | S04 타건·하이파이브 영상 8차 |
 | `코디세이_b1_2_나레이션_full_v01.mp3` | 나레이션 전체 |
+
+---
+
+## STEP 5-A · 전 씬 프롬프트 전문
+
+각 씬마다 **① 시작 프롬프트(키 이미지 생성) · ② 종결 프롬프트(영상 변환) · ③ 네거티브 프롬프트** 세 종류를 모두 기록한다. 캐릭터 시트 생성 프롬프트는 STEP 6-A에 별도 수록.
+
+---
+
+### S01 · 화이트보드 — 0:00 ~ 1:04f (1.13초)
+
+**① 시작 프롬프트 — 키 이미지 생성 (ChatGPT)**
+```
+3D animated scene, soft matte 3D style — matte non-reflective
+surfaces, gentle rounded edges, no specular highlights, soft
+diffused lighting.
+
+SHOT: extreme close-up of a whiteboard filling the entire 16:9
+frame. Slightly off-white surface with a faint cool grey tint.
+
+CONTENT: handwritten Korean text "AI란?" in thick black marker,
+large and centered-left. The question mark is the focal point.
+
+HAND: at the right edge of the frame, a professor's hand and
+forearm holding a black marker, tip touching the end of the
+question mark. Only hand and part of forearm visible — no face,
+no body. Rounded simplified fingers, no knuckle detail, no
+fingernails, matte skin. Slightly deeper warmer tan skin tone
+than a young student, mature Korean adult. Crisp white dress
+shirt with cuff rolled slightly, simple silver wristwatch with
+a dark face.
+
+LIGHTING: cool fluorescent classroom light, flat and slightly
+drab, soft wide shadows, low contrast, muted cool color grade.
+
+MOOD: static, quiet, uninspiring.
+No text other than "AI란?", no watermark, no logo.
+```
+
+**② 종결 프롬프트 — 영상 변환 (Google Flow · Omni Flash)**
+```
+Keep the whiteboard and the hand exactly as in the image — don't
+add anyone. The view slowly sags downward like heavy eyelids,
+blurring more as it sinks, then snaps back up and refocuses.
+The blur and the sinking happen together.
+```
+
+**③ 네거티브 프롬프트**
+```
+warm lighting, dramatic shadows, glossy surfaces, young hand,
+casual clothing, blue sweater, face, full body, person, student,
+new objects
+```
+
+> **결과** — 흐림과 시야가 가라앉는 움직임이 **모두 생성됐다.** 다만 10초 배분상 해당 구간이 길어 편집에서 가라앉는 부분을 덜어내고 **흐림 구간만 최종본에 채택**했다.
+
+---
+
+### S02 · 강의실 — 1:04f ~ 3:18f (2.47초)
+
+**① 시작 프롬프트 — 키 이미지 생성 (ChatGPT)**
+```
+Use the attached character sheet as the exact reference for the
+main character — same face, same brown curly hair, same blue knit
+sweater with darker blue ribbing, same white inner tee, same dark
+navy jeans with rolled cuffs. Keep the soft matte 3D style,
+rounded forms, and non-reflective surfaces.
+
+SHOT: 16:9 medium shot from the professor's point of view at the
+front of a university lecture hall, looking down slightly at one
+row of student desks. Camera elevated and static.
+
+COMPOSITION: the main character sits at the center at a desk,
+resting his chin on one hand, head drooping, eyes half-closed and
+drowsy. An open notebook and pen in front of him. On both sides,
+two or three other students rendered soft and out of focus —
+simple rounded shapes, faces indistinct, some slumped forward.
+Leave clear empty space in the upper portion of the frame.
+
+BACKGROUND: plain lecture hall — rows of simple desks, neutral
+grey-beige walls, no decoration, blurred with shallow depth of
+field.
+
+LIGHTING: cool fluorescent ceiling light, flat and drab, soft wide
+shadows, low contrast, desaturated cool color grade. The blue
+sweater remains the only clear color accent in the frame.
+
+MOOD: quiet, listless, low energy.
+No text, no watermark, no logo.
+```
+
+**①-b 수정 프롬프트 — 주변 인물 상태 변경**
+```
+Use the attached image as the exact base. Keep EVERYTHING
+identical — same camera angle, same framing, same lighting, same
+desks, same background, same main character in the blue sweater
+at the center with his chin resting on his hand and drowsy
+half-closed eyes. His pose and expression do not change.
+
+CHANGE ONLY THE SURROUNDING STUDENTS: they are no longer writing
+or paying attention. Instead they look bored and sleepy — one
+slumped forward with head down on the desk, one with chin propped
+on a hand and eyes half-closed, one leaning back with head
+tilted. Pens are set down, not held. Keep them soft and out of
+focus as they are now — do not sharpen them or add facial detail.
+```
+
+**② 종결 프롬프트 — 영상 변환 (Google Flow · Omni Flash)**
+```
+Keep the scene as in the image. The camera pushes in very slowly
+toward the boy in the blue sweater at the center. His eyes slowly
+close and his head drops forward as he nods off, then he catches
+himself and his head comes back up. Only two of the background
+students move slightly — one shifts, one lowers their head. The
+rest stay still. Cool flat drab lighting, soft matte 3D animation
+style, sleepy mood.
+```
+
+**③ 네거티브 프롬프트**
+```
+warm lighting, vibrant colors, glossy surfaces, sharp background
+detail, crowded classroom, many detailed students, writing,
+taking notes, holding pens, attentive students, smiling,
+energetic pose
+```
+
+> **결과** — 꾸벅 조는 버전도 생성했으나 **캐릭터 일관성 저하 + 길이 제약으로 미채택**. 최종본은 턱을 괸 상태에서 인물 쪽으로 줌인하며 **한숨 쉬듯 입모양이 아주 미세하게 변하는** 버전을 사용했다.
+
+---
+
+### S03 · 코디 등장 — 3:18f ~ 6:12f (2.80초)
+
+**① 시작 프롬프트 — 키 이미지 생성 (ChatGPT)**
+```
+Use the attached robot character sheet as the exact reference —
+same amber orange hood shape, same glossy black oval face screen,
+same glowing pale blue eyes, same grey side pods, same cream chest
+panel, same detached crescent arms, same matte finish.
+
+SHOT: 16:9 frame. The robot floats at the center, seen from the
+front, having just completed a spin and come to a stop. Its
+crescent arms are settling inward toward the body after being
+flung outward by the rotation. The face screen is lit with glowing
+pale blue eyes and a small curved smile.
+
+BACKGROUND: bright blue gradient, completely even, no objects.
+
+LIGHTING: bright, warm, high-key. Soft diffused light, gentle
+shadows, matte surfaces throughout.
+
+MOOD: sudden arrival, energy, a burst of color after dullness.
+No text, no watermark, no logo.
+```
+
+**② 종결 프롬프트 — 영상 변환 (Google Flow · Omni Flash) · 확정본**
+```
+Video clip, 4 seconds, 16:9.
+
+Use the attached background image exactly as it is — keep it
+completely unchanged throughout the clip, no color shifts, no
+gradient changes, no added objects.
+
+The robot springs up into the frame from the lower left corner,
+arcing through the air in a curved parabolic path — rising up and
+to the right, then settling into the lower center of the frame.
+
+It comes to rest large in the frame, close to the camera, filling
+the lower portion — its head and face screen fully visible in the
+lower-middle area, while the bottom of its body is cropped off by
+the bottom edge of the frame. Leave the entire upper third of the
+frame empty and clear.
+
+It spins once around its vertical axis while rising — fast while
+its back faces the camera, slowing as the face comes around to
+the front. Its two crescent arms swing outward during the fast
+part and settle toward the body as it slows.
+
+FACE SCREEN: stays lit and clearly visible for the entire clip,
+never dark or blank, even while the robot's back is turned during
+the spin. It shows the default expression — simple glowing pale
+blue oval eyes and a small curved smile — during the rise. The
+moment it settles into place, the expression changes to a big
+bright happy smile — eyes as wide cheerful curved arcs and a
+large open smile, joyful and beaming. No sparkles, no stars,
+no blush marks.
+
+After it settles, the camera slowly pushes in slightly toward the
+robot's face.
+
+The robot keeps its original colors. Soft matte 3D animation style.
+```
+
+**③ 네거티브 프롬프트**
+```
+legs, feet, standing pose, metallic, chrome, glossy body,
+mechanical joints, screws, panel lines, dark face screen,
+sparkle eyes, blush marks, changed background, background color
+shift, human character
+```
+
+> **결과** — 최다 재생성 구간(11회). 배경 유지·회전 속도·얼굴 스크린 점등·표정 전환·반짝임 개수라는 다섯 변수가 겹쳐 있었다. **파란 그라데이션 배경을 첨부해 "그대로 유지하라"고 지시했을 때 배경뿐 아니라 캐릭터 일관성까지 함께 안정**됐다.
+
+---
+
+### S04 · 타이핑 → 하이파이브 → 브랜드 페이오프 — 6:12f ~ 10:00 (3.60초)
+
+**① 시작 프롬프트 — 시작 프레임(타이핑) 키 이미지 생성 (ChatGPT)**
+```
+Use the attached character sheet for hand shape, skin tone, sleeve
+color, and matte material finish — rounded simplified fingers,
+no fingernails, no visible knuckles.
+
+SHOT: 16:9 close-up from a low side angle, camera almost level
+with the desk surface, looking across the desk from the left side.
+Nearly profile view.
+
+SUBJECT: an open laptop seen from its left side — the screen is
+angled away so its display is not visible, only the thin edge and
+the hinge. The laptop body has visible thickness and a clearly
+defined base. Both hands rest on the laptop's own built-in
+keyboard, fingers curled and mid-typing, evenly placed near the
+center of the keyboard. Blue knit sweater cuffs at both wrists.
+No separate external keyboard.
+
+ROBOT: on the LEFT side of the frame, the amber orange robot
+floats beside the laptop, cropped at about half its body but with
+the black face screen and glowing pale blue eyes clearly visible,
+turned toward the laptop.
+
+COMPOSITION: laptop, hands, and robot occupy the LEFT TWO-THIRDS.
+The RIGHT THIRD is empty clean space.
+
+BACKGROUND: bright blue gradient with soft pastel spheres,
+softly blurred.
+
+LIGHTING: bright high-key diffused light, soft gentle shadows,
+warm and fresh. No dark areas, no dramatic contrast.
+```
+
+**①-b 끝 프레임(하이파이브) 키 이미지 생성 (ChatGPT)**
+```
+Use the attached S04 typing shot as the base for the same desk,
+same laptop, same background, same lighting.
+
+The young man sits at the desk, body turned slightly toward the
+robot, one arm raised with hand open, palm facing the robot.
+Keep the arm bent close to his body — do not extend. His other
+hand stays resting near the laptop. Expression: bright open smile
+with happily squinting curved eyes. His eyes are solid dark
+shapes with absolutely no white sclera visible.
+
+The robot floats at the height of his raised hand, one crescent
+arm extended toward his palm, face screen showing happy curved
+eyes.
+
+Their hands have NOT touched yet — a clear visible gap of empty
+space remains between the blue sleeve and the orange arm.
+
+Small star and sparkle shapes burst outward from the gap in amber
+orange and bright blue only, scattered and light.
+
+COMPOSITION: both figures occupy the LEFT TWO-THIRDS. The RIGHT
+THIRD stays completely empty.
+```
+
+**② 종결 프롬프트 — 영상 변환 (Google Flow · Omni Flash) · 시작·끝 프레임 보간**
+```
+Start from the typing close-up as the first frame and end at the
+high-five as the final frame. Keep the character exactly as in
+the images — same face, solid dark eyes with no whites, same art
+style, same colors. Do not move anyone to the center.
+
+The hands type on the laptop keyboard in a light steady rhythm.
+Only a few fingers move; the wrists stay in place. Then the camera
+pulls back to reveal the young man at the laptop, and he looks up
+with a confident, satisfied smile — proud and pleased, not just a
+small polite smile. Then he raises his hand and high-fives the
+floating robot, both grinning warmly. Keep his arm bent close to
+his body — the robot comes to him.
+
+The background spheres keep their shapes and only drift slightly.
+```
+
+**③ 네거티브 프롬프트**
+```
+external keyboard, separate keyboard, visible screen content,
+dark background, moody lighting, cluttered desk, fingernails,
+morphing fingers, extra fingers, white sclera, eye whites,
+Disney style, Pixar style, Western face, recentered subjects,
+elongated arm, stretched arm, morphing background spheres,
+restyled character, standing up
+```
+
+> **결과** — 보간 구간에서 **줌아웃과 함께 캐릭터가 45도 미만으로 회전**하고, 하이파이브 순간 **줌인(클로즈업)**으로 마무리되는 흐름을 확보했다. 브랜드 페이오프(브랜드명 타이포·로고)는 생성 없이 **CapCut 아웃 애니메이션**으로 처리했다.
 
 ---
 
@@ -320,6 +623,25 @@ S02까지 무채색 강의실에 파란 주인공만 있다가, S03에서 주황
 ### 6-A. 캐릭터 디자인 확정 — 스타일 템플릿을 먼저 만들다
 
 영상에서 씬마다 캐릭터가 흔들리지 않으려면, 개별 이미지를 뽑기 전에 **재사용 가능한 스타일 정의**가 먼저 필요하다. 그래서 캐릭터를 바로 그리게 하지 않고, **AI에게 스타일 분석을 시켜 프롬프트 템플릿을 만들게 하는 메타 프롬프트**로 시작했다.
+
+#### 확정 캐릭터 시트
+
+<table>
+<tr>
+<td width="50%" align="center">
+<img src="assets/코디세이_b1_2_캐릭터시트_세이_ff.png" alt="주인공 세이 캐릭터 시트" width="100%"><br>
+<b>세이</b> — 주인공<br>
+<sub>소프트 블루 니트 · 로고의 물결(배)</sub>
+</td>
+<td width="50%" align="center">
+<img src="assets/코디세이_b1_2_캐릭터시트_코디_ff.png" alt="AI 로봇 코디 캐릭터 시트" width="100%"><br>
+<b>코디</b> — AI 로봇<br>
+<sub>허니 머스타드 옐로우 · 로고의 돛</sub>
+</td>
+</tr>
+</table>
+
+> 두 캐릭터는 **같은 스타일 템플릿에 주제만 바꿔 넣어** 생성했다. 아래는 그 템플릿을 만들고 적용한 과정이다.
 
 #### 1단계 · 메타 프롬프트 — AI를 프롬프트 엔지니어로 세우기
 
@@ -528,7 +850,7 @@ Flow의 **캐릭터 등록(Character Reference) 기능**을 두 캐릭터 모두
 
 ### 6-F. 재현성 로그
 
-> 아래 표의 S05·S06 표기는 **이미지 생성 단계의 세부 키프레임 명칭**이며(줌아웃 이미지 / 하이파이브 이미지 / 로고), 최종 편집본에서는 모두 실측 S04 구간(6:12f ~ 10:00, 3.60초) 안에 순차 배치됐다.
+> 키 이미지는 최종 편집본의 실측 4개 씬 구조에 대응한다. S04의 세부 컷(타이핑·하이파이브)은 모두 S04 구간(6:12f ~ 10:00, 3.60초) 안에 순차 배치됐다.
 
 | 대상 | 파일명 | 도구 | 참조 | 재생성 | 확정 |
 |---|---|---|---|---|---|
@@ -553,7 +875,7 @@ Flow의 **캐릭터 등록(Character Reference) 기능**을 두 캐릭터 모두
 | S04 | `codyssey_S04_typing_highfive_v08.mp4` | 8 |
 | **합계** | | **25** |
 
-**안전·저작권 준수:** 실존 인물·딥페이크 없음. 모든 시각 요소는 AI 생성물이며, 로고만 브랜드 원본 자산을 오버레이했다.
+**안전·저작권 준수:** 실존 인물·딥페이크 없음. 모든 시각 요소는 AI 생성물이며, 로고만 브랜드 원본 자산을 사용했다.
 
 ---
 
@@ -642,11 +964,11 @@ The surrounding space is soft and dark by comparison.
 
 | 씬 | 생성 횟수 | 변환 방식 | 결과 |
 |---|---|---|---|
-| S01 (1.13s) | **2회** | 시작 이미지 + 흐림·카메라 워킹 지시 | 흐림 효과 성공. 1인칭 시야가 가라앉는 움직임은 끝내 미구현 → **흐림만 채택** |
+| S01 (1.13s) | **2회** | 시작 이미지 + 흐림·카메라 워킹 지시 | **흐림과 시야가 가라앉는 움직임 모두 생성 성공.** 다만 10초 배분상 해당 구간이 길어 **편집에서 가라앉는 부분을 덜어내고 흐림 구간만 채택** |
 | S02 (2.47s) | **4회** | 시작 이미지 + 줌인·표정 변화 | 꾸벅 조는 버전도 생성했으나 **캐릭터 일관성 저하 + 길이 제약으로 미채택**. 최종은 턱을 괸 상태에서 인물 쪽 줌인 + 한숨 쉬듯 입모양이 아주 미세하게 변하는 버전 |
 | S03 (2.80s) | **11회** | 시작 이미지(파란 그라데이션 배경) + 포물선·회전·줌인 지시 | 최다 재생성 구간. 포물선 궤적·360° 회전·얼굴 스크린 상시 점등·착지 후 줌인까지 확보. **캐릭터 일관성과 스크린 점등 모두 안정적** |
-| S04 (3.60s) | **8회** | **시작 프레임(타건) + 끝 프레임(하이파이브) 지정 → 중간 보간** | 타건은 카메라 고정 조건이 캐릭터 유지에 결정적. 줌아웃 구간은 캐릭터 재해석 문제가 반복돼 카메라 무빙 최소화로 조정 |
-| 로고 구간 | 생성 없음 | — | CapCut에서 로고·브랜드명·고지 문구 오버레이 |
+| S04 (3.60s) | **8회** | **시작 프레임(타건) + 끝 프레임(하이파이브) 지정 → 중간 보간** | 타건은 카메라 고정 조건이 캐릭터 유지에 결정적. 보간 구간에서 **줌아웃과 함께 캐릭터가 45도 미만으로 회전**하고, 하이파이브 순간 **줌인(클로즈업)**으로 마무리 |
+| 브랜드 페이오프 | 생성 없음 | — | CapCut에서 브랜드명 타이포·로고·고지 문구를 **아웃 애니메이션**으로 처리 |
 
 **총 25회 생성.** S03이 11회로 가장 많았는데, 배경 유지·회전 속도·얼굴 스크린 점등·표정 전환·반짝임 개수라는 다섯 변수가 한 클립에 겹쳐 있었기 때문이다. 변수를 하나씩 분리해 지시하는 방식으로 좁혀 나갔고, 최종적으로 **파란 그라데이션 배경을 첨부해 "그대로 유지하라"고 지시했을 때 캐릭터 일관성까지 함께 안정됐다.**
 
@@ -755,7 +1077,7 @@ advertising music, hopeful and energetic
 
 | 시점 (30fps) | 이벤트 |
 |---|---|
-| 0:00 ~ 3:18f (~3.60s) | **무음 구간** — BGM 없이 앰비언스만. 지루함의 체감을 만들고 다음 폭발을 위해 저축 |
+| 0:00 ~ 3:18f (~3.60s) | **BGM 없는 구간** — 아주 작은 기계 웅웅거림(형광등 앰비언스)만 깔림. 지루함의 체감을 만들고 다음 폭발을 위해 저축 |
 | 3:18f (~3.60s) | **BGM 첫 진입 + 로봇 등장 효과음** — 소리·색·속도가 한 점에서 동시에 터짐 |
 | S04 후반부 | **정점 + 하이파이브 임팩트** — 감정 최고점과 BGM 정점을 겹침 |
 
